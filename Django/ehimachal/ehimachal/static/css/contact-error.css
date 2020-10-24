@@ -1,0 +1,66 @@
+
+body{
+
+    background:  url('../StaticImages/Contact/Contact-error.jpg')  no-repeat center ;
+        background-position: 0px 0px;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;
+    
+    }
+
+    #submitButton{
+        background: none;
+        color : white;
+        border: 4px solid white;
+    }
+    #submitButton:hover{
+        color :rgb(255, 255, 255);
+        background : none ;
+        border : 2px solid rgb(182, 180, 180);
+    }
+    
+    .container{
+        text-align: center;
+       
+        color  : white;
+    }
+    .container h1{
+        color : white;
+        font-size : 36px;
+    }
+    
+    
+    .formStyle{
+        background : none !important;
+        border : 2px solid white !important;
+        padding : 5px !important;
+        color : white !important;
+        font-size: 15px !important;
+        
+    }
+    label{
+        font-size: 20px;
+    }
+    .form-group .fa{
+        margin: 5px;
+        font-size: 17px;
+    }
+
+    div.flex-image{
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    #image{
+    
+        margin: auto;
+    }
+    div.container.imageStyle input{
+
+        justify-content: center;
+        display: flex;
+        flex-wrap: row wrap;
+    }

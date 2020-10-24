@@ -1,0 +1,60 @@
+.centerImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+img.secImage{
+    height: 400px;
+    width: 95%;
+}
+
+h2.mb-0{
+    text-align: center;
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shadows Into Light', cursive;
+}
+h1{
+    text-align: center;
+    margin: 20px;
+    /* font-family: 'Ranchers', cursive; */
+    font-family: 'Shadows Into Light', cursive;
+  
+}
+.container h1{
+    font-size: 33px;
+}
+h1.mainHeading{
+    font-size: 35px;
+}
+button.btn.btn-link.btn-block{
+    color : rgb(80, 173, 68);
+    font-size: 22px;
+    text-align: center;
+}
+p.imageDesc{
+    text-align: center;
+    font-size:18px !important;
+    font-family: 'Amatic SC', cursive;
+}
+p.imageDesc a{
+    font-size:18px;
+}
+.container p{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size : 24px;
+    color :#5E735E
+}
+.container li{
+    font-size: 24px ;
+    font-family: 'Amatic SC', cursive;
+    color : rgb(54, 71, 52)
+}
+button.btn.btn-block.text-center{
+    color : #8eb18e;
+    cursor: pointer;
+    font-size : 20px;
+}

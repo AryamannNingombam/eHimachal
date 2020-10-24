@@ -1,0 +1,177 @@
+
+
+nav{
+    width : 100%;
+
+    display: block;
+}
+
+nav.navbar {
+  background : linear-gradient(90deg,  #719b86 0%, rgb(80, 163, 87) 43%, rgb(67, 167, 27) 100%);
+  
+}
+
+
+a.nav-link{
+   color : rgb(236, 236, 236);
+    margin: 10px;
+    font-size:24px;
+}
+
+a.nav-link:hover{
+    color :#4c5e45;
+    margin : 10px;
+  
+}
+nav li:after {
+    display:block;
+    content:"";
+    border-bottom:3px solid #4c5e45;
+    transform:scaleX(0);
+    transition:transform 0.2s ease-in-out
+}
+
+nav li:hover:after {
+    transform:scaleX(1)
+
+
+}
+
+a.dropdown-item{
+    cursor: pointer;
+    font-family: 'Overpass', sans-serif;
+
+}
+a.mainTitleNavbar{
+    font-size: x-large;
+    /* font-family: 'Kaushan Script', cursive; */
+    /* font-family: 'Monoton', cursive; */
+    font-family: 'Rock Salt', cursive;
+    cursor: pointer;
+}
+li.activeNav{
+color :  #2B750A;
+}
+button.navbar-toggler{
+color  : white;
+}
+div.menuIcon{
+
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 6px 0;
+      
+}
+a.selectedNav{
+    color :#4c5e45;
+   font-size: 26px;
+}
+nav a.nav-link{
+    /* font-family: 'Sriracha', cursive; */
+    /* font-family: 'Covered By Your Grace', cursive; */
+    font-family: 'Knewave', cursive;
+    font-size: 23px;
+
+}
+
+
+
+
+
+
+
+.goToTop{
+ 
+    text-align: right;
+   
+}
+#topButton{
+    color : rgb(54, 150, 214)
+}
+
+footer {
+        
+        
+
+
+    position:static !important;
+    bottom:0px !important;
+    width:100% !important;
+    margin-top: 100px !important;
+    margin-bottom:0px !important;
+text-align: center;
+    }
+
+    footer i {
+        margin-bottom: 2px;
+        
+        transition: 0.2s;
+        transition-timing-function  : ease-out;
+
+        font-size: 40px;
+
+
+
+    }
+
+#instagram{
+    color: #df87d9;
+}
+#facebook{
+    color: #578de4;
+}
+#linkedin{
+    color : #6489c4;
+}
+
+
+    #instagram:hover {
+        color: #CF54C7;
+        font-size: 60px;
+        transition: 0.2s;
+        transition-timing-function  : ease-out;
+
+
+    }
+
+    #facebook:hover {
+        color: #1B68E7;
+        font-size: 60px;
+        transition: 0.2s;
+        transition-timing-function  : ease-out;
+    }
+
+    #linkedin:hover {
+        color: #4481E5;
+        font-size: 60px;
+        transition: 0.2s;
+        transition-timing-function  : ease-out;
+    }
+
+
+.wave:hover{
+        animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+        animation-duration: 2.5s;        /* Change to speed up or slow down */
+        animation-iteration-count: infinite;  /* Never stop waving :) */
+        transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+        display: inline-block;
+      }
+      
+ @keyframes wave-animation {
+          0% { transform: rotate( 0.0deg) }
+         10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+         20% { transform: rotate(-8.0deg) }
+         30% { transform: rotate(14.0deg) }
+         40% { transform: rotate(-4.0deg) }
+         50% { transform: rotate(10.0deg) }
+         60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+        100% { transform: rotate( 0.0deg) }
+      }
+
+
+.fa.fa-hand-peace-o{
+          font-size : 25px;
+          color : #285a3b
+}
+

@@ -1,0 +1,49 @@
+{%extends 'layout.html'%}
+{%block title%}Contact Us!{%endblock%}
+{%load static %}
+{%block css%}  <link rel="stylesheet" href="{%static 'css/contact.css' %}">   {%endblock%}
+{%block body%}
+
+<span id="alertSpan"></span>
+
+
+
+    <div class="container my-5 ">
+        
+                <h1>Contact Us!</h1>
+            
+        
+    <form>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="email">{{form.email.label}}<i class="fa fa-envelope"></i></label>
+            {{form.email}}
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="content">{{form.content.label}}	
+                <i class="fa fa-comment"></i></label>
+            {{form.content}}
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-lg btnStyle my-5" id="submitButton">Submit</button>
+
+</form>
+</div>
+
+
+
+{%endblock%}
+
+{%block js%}
+
+<script  src="{%static 'Script/contact.js'%}"></script>
+{%endblock%}
+

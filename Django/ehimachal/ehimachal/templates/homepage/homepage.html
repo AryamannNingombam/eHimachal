@@ -1,0 +1,199 @@
+{%extends 'layout.html'%}
+{%block css%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+<link rel="stylesheet" href="{% static 'css/background-image.css' %}">
+{%endblock%}
+{%block title%}
+Welcome!
+{%endblock%}
+{%block body%}
+
+
+
+<!-- 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12"> -->
+            <div class="mainHeaderImage img-responsive">
+                <div class="centered">
+                    
+                               <h1>Himachal</h1>
+                               <h3>The Wonderland</h3>
+                        
+                </div>
+                   </div>
+                   <p>Image by <a href="https://pixabay.com/users/avalok-6343751/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2792127">avalok sastri</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2792127">Pixabay</a></p>
+<!--         
+        </div>
+    </div>
+    
+</div> -->
+   
+
+          
+                
+        
+
+<hr>
+<div class="container">
+ 
+        <h1>Discover The Magic</h1>
+   
+</div>
+
+
+
+
+<div class="container destinationListDiv">
+    <div class="flex-container">
+        {%for destination in destinations%}
+        <a href="{% url 'specificPlace' destination.0.sno %}" >
+        <div class="my-4 mx-3">
+            <div class="card cardAnimation" >
+                <img class="destinationList" src="/media/{{destination.1.image_url}}">
+                <div class="centeredList my-5">
+                    <h2>{{destination.0.name}}</h2>
+                   <p>Learn More</p>
+                    
+                </div>
+              
+              </div>
+              
+
+
+        </div>
+    </a>
+        {%endfor%}
+    </div>
+</div>
+
+<div class="container">
+    <div class="scrollmenu">
+        {%for destination in destinations2%}
+        <a href="{% url 'specificPlace' destination.0.sno %}"  >
+        <div class="my-4 mx-3">
+            <div class="card" >
+                <img class="destinationList" src="/media/{{destination.1.image_url}}">
+                <div class="centeredList my-5">
+                    <h2>{{destination.0.name}}</h2>
+                   <p>Learn More</p>
+                    
+                </div>
+              
+              </div>
+              
+
+
+        </div>
+    </a>
+        {%endfor%}
+    </div>
+</div>
+
+
+
+
+
+<div class="container my-5 flex-video">
+   
+            <iframe  src="https://www.youtube.com/embed/fPqJZvaKeao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+    
+</div>
+
+
+<hr>
+<div class="flex-content">
+    <div class="container my-5">
+        <div class="row ">
+            <div class="col-md-12">
+                
+                <h1>How To Get Here</h1>
+            </div>
+        </div>
+        <h2>By plane</h2>
+        <p>Shimla,Kullu(for Manali) and Kangra or Pathankot have small airports, with services largely limited to Delhi. Flights are frequently cancelled or delayed by adverse weather. In addition the airport in Pathankot (Punjab) can be a convenient connection for Dharamsala and Dalhousie. If you are on a tight budget you might want to skip this option as it is way more costly than other mode of transportation. Airfare on this route is one of the highest in world for a given unit distance. Airport in Shimla is at Jubbal Hatti which is around 40 km away from main Shimla City.</p>
+        <h2>By train</h2>
+        <p>Given the difficult geographical position of State there is very little penetration of railway network. Little rail network available give access to peripheral districts and capital Shimla. Nevertheless it is an amazing experience going from Kalka to Shimla. Kalka-Shimla railway track is also UNESCO world heritage site. Few points in Himachal are easily accessible by train, but there are <strong>narrow-gauge railways</strong> from Pathankot (Punjab) to Kangra and Kalka (Haryana) to Shimla. This will take you through beautiful rural Himalayan regions. The ride beyond Kangra is amazing. You ride along the Dhauladhar range of the Himalayas via Palampur and Baijnath to Joginder Nagar. The region is criss crossed by rivers and streams.</p>
+        <h2>By bus</h2>
+        <p>Bus is the only practical means of getting to many points in Himachal. All cities of interest have direct services to Delhi. There are three different entry routes to Himachal if you are coming from Delhi.</p>
+        <ul>
+        <li>Delhi-Chandigarh-Shimla-Kaza route.</li>
+        <li>Delhi-Chandigarh-Bilaspur-Mandi-Manali-Keylong-Leh</li>
+        <li>Delhi-Chandigarh-Kangra-Dharamsala or Delhi-Chandigarh-Kangra-Chamba</li>
+        </ul>
+        <p>All three routes are interconnected within Himachal. It is cheapest means to travel in and around Himachal. There are Volvo buses operated by Himachal State Transport Corporation on these routes.</p>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Places To See</h1>
+            </div>
+        </div>
+        
+        <p><strong>Dalhousie</strong> is a world-famous hill station, located in the western part of Himachal Pradesh. Dalhousie is basically built on five different hills called Balun, Tehra, Kathlog, Patreyn and Bakrota, and covers an area of 14 sq. Km. Dalhousie is named after one of the British Governor Generals, Lord Dalhousie. Dalhousie has many beautiful churches and charming colonial architecture.</p>
+    <p><strong>Kullu Valley</strong> is very well known as <em>Valley of Gods</em>. It is situated on the Beas river bank in the lower reaches of Himalayas. Rudyard Kipling has written: "Surely the Gods live here; this is no place for men". Kullu is very well known for its ancient temples, festivals and apple orchards. This place is also famous for its handicraft work and woollen work of puhla, shawls, patoos, caps and namdas. The best time to visit Kullu is during Dusshera in the month of October.</p>
+    <p><strong>Spiti Valley</strong> is also known as the <em>Little Tibet</em> due to its vegetation, terrain and climate which are similar to Tibet. Spiti also means <em>Middle Country</em>.</p>
+    <p><strong>Lahul Valley</strong> is green compared to <em>Spiti Valley</em>. It is covered with snow for most of the year. Roads are closed from late October to early May. Its main attractions are <em>Patten Valley</em> and <em>Sri Trilokinath Temple</em>, as well as lots of monasteries.</p>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"><h1>Things To Do</h1></div>
+        </div>
+        <p>Trekking opportunities are plenty in the state, here are a few:</p>
+    <ul>
+    <li><strong>Baralacha-Chandratal Trek</strong> starts from Manali, ends at Chandratal Lake ("Moon" Lake)</li>
+    </ul>
+    <ul>
+    <li><strong>Bhabha Pass Trek</strong> known for lush green flower strewn meadows, picturesque and dense forests. he path for bhaba pass trek passes through a mixed forest of conifers as well as crop fields of Mastrang.</li>
+    </ul>
+    <ul>
+    <li><strong>Bara Bhangal Trek</strong> Bara Bhangal Trek is only for the experienced trekkers who have the experience of solid hiking and camping. This is one of the challenging trekking trails which starts from the Kullu valley.</li>
+    </ul>
+    <ul>
+    <li><strong>Darcha Lamayuru Trek</strong>this is one of the most popular trekking treks in the Himachal Pradesh, and one of the most traversing trek, passing through the Zanskar</li>
+    </ul>
+    <ul>
+    <li><strong>Darcha Padum Trek</strong></li>
+    </ul>
+    <ul>
+    <li><strong>Deo Tibba Expedition</strong></li>
+    </ul>
+    <ul>
+    <li><strong>Friendship Peak Expedition</strong></li>
+    </ul>
+    <ul>
+    <li><strong>Hampta Pass</strong></li>
+    </ul>
+    <ul>
+    <li><strong>Indrahar Pass</strong></li>
+    </ul>
+    <ul>
+    <li><strong>Kunzum La to Chandrataal Hike</strong> This is one of the shorter hikes of around 8 km from Kunzum La till Chandrataal Lake. Terrain is not that difficult, but high altitude may pose some problem for people not used to it.</li>
+    </ul>
+    <h3><strong> Trekking routes in Himachal</strong> </h3>
+    <p> </p>
+    <ul>
+    <li><strong>Hamta Trek</strong></li>
+    <li><strong>Malana History Trek</strong></li>
+    <li><strong>Sourkundi Pass Trek in Kullu Valley</strong></li>
+    <li><strong>Koatkandhi in Kullu Valley</strong></li>
+    <li><strong>Dharamsala Chhota Bhangal over sari Pass Kullu</strong></li>
+    <li><strong>Morchella trek</strong></li>
+    <li><strong>Manali Hamta Trek</strong></li>
+    <li><strong>Kinner Kailash Parikrama</strong></li>
+    <li><strong>Hamirpur Deotsidh Sri Naina Devi Trek</strong></li>
+    <li><strong>Maidi to Nadaun</strong></li>
+    <li><strong>Bharmaur Kugti Udaipur Manali trek</strong></li>
+    </ul>
+    </div>
+    
+
+
+</div>
+
+
+{%endblock%}
