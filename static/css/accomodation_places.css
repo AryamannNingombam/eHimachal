@@ -1,0 +1,132 @@
+img.destinationListMain{
+    width: 100%;
+    height:500px;
+}
+
+div.destinationImage{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centeredListMain h1{
+    margin: 20px;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 23px;
+}
+.container-fluid {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 5px;
+}
+
+.container h1{
+    text-align: center;
+
+
+}
+
+.card{
+    width: 90%rem!important;
+    height: 400px;
+}
+img.imageList{
+    width: 100%;
+    height: 100%;
+}
+
+.centeredList p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  color : rgb(247, 247, 247);
+  font-family: 'Sigmar One', cursive;
+  text-align: center;
+ 
+}
+
+.centeredList h1{
+    margin: 20px;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color : white;
+    
+  }
+
+button.buttonAccomodation{
+  font-size: 30px;
+  padding : 11px;
+  background: none;
+  border : 4px solid white;
+  color : white;
+  border-radius: 10rem!important;
+}
+button.buttonAccomodation:hover{
+    font-size: 30px;
+    padding : 9px;
+    background: none;
+    border : 4px solid green;
+    color : green;
+    border-radius: 10rem!important;
+    
+    
+  }
+
+
+@keyframes retainCard{
+    from{
+        width: 95%rem;
+        height: 440px;
+    }
+    to{
+        width: 90%rem!important;
+        height: 400px;
+    }
+  }
+  div.card{
+  border: none;
+  background : none;
+  animation-name: retainCard;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  }
+  
+  
+   @keyframes enhanceCard{
+     from {
+        width: 90%rem!important;
+        height: 400px;
+     }
+     to {
+      width: 95%rem!important;
+      height: 440px;
+     }
+   }
+  div.card:hover{
+    border: none;
+  background : none;
+    animation-name: enhanceCard;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+ .buttonDiv{
+    text-align: center;
+  }
+  button.readButton{
+    border : 3px solid #37a6da;
+    color : #37a6da;
+    background: none;
+
+  }
+
+  button.readButton:hover{
+
+    color : white;
+    background-color: #37a6da;
+
+  }

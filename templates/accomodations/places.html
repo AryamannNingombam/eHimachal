@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{%block body%}
+{%load static%}
+
+<div class="destinationImage">
+
+    <img class="destinationListMain" src="{% static 'StaticImages/Accomodations/places_main.jpg' %}">
+    <div class="centeredListMain">
+    <h1>{{destination.name}}</h1>
+  
+        
+    </div>
+  
+
+  
+
+
+</div>
+<hr>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Places Recommended By Us</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container my-3">
+    {%for accomodation in accomodations%}
+    <a href="{{accomodation.website_url}}" target="_blank">
+    <div class="row my-4">
+        <div class="col-md-12">
+            <div class="card">
+                <img class="img-responsive imageList" src="{{accomodation.accomodation_image}}" alt="">
+                <div class="centeredList">
+                    <h1>{{accomodation.name}}</h1>
+                    <p><button class="buttonAccomodation">Visit Site</button></p>
+                  
+                        
+                    </div>
+            </div>
+
+
+        </div>
+    </div>
+</a>
+    {%endfor%}
+</div>
+<div class="container buttonDiv">
+    <a href="{% url 'specificPlace' destination.sno%}"><button class="btn btn-lg readButton">Read About {{destination.name}}</button></a>
+</div>
+
+
+{%endblock%}
+{%block css%}
+
+<link rel="stylesheet" href="{% static 'css/accomodation_places.css' %}">
+<link rel="stylesheet" href="{% static 'css/background-image.css' %}">
+{%endblock%}

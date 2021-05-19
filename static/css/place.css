@@ -1,0 +1,151 @@
+img.destinationList{
+    width: 100%;
+    height:500px;
+  
+}
+div.destinationImage{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+img.destinationListEnd{
+    width: 100%;
+    height:100%;
+}
+div.card{
+    width: 30rem;
+    height: 25rem;
+    
+}
+.centeredList p{
+    font-size: 15px;
+    color : white
+}
+.centeredList  {
+ 
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+
+   
+   
+  }
+.centeredList h1{
+      margin: 10px;
+      font-size: 25px;
+  }
+
+.courtesy{
+
+      font-size: 11px;
+      display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+div.row h1,h4{
+    text-align: center;
+
+    font-family: 'Bebas Neue', cursive;
+    font-size : 40px;
+}
+div.container h1{
+    text-align: center;
+}
+
+.iconStyling{
+    font-size: 90px;
+    
+    padding: 20px;
+    color: aliceblue;
+    background-color: slategrey;
+    margin: 30px;
+   
+
+}
+
+.rounded{
+    border-radius: 10rem!important;
+}
+.populationStats{
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+}
+.statNumbers{
+    font-size: 40px;
+    cursor: pointer;
+}
+h2,h3 {
+    font-family: 'Indie Flower', cursive ; 
+    /* font-family: 'Bebas Neue', cursive; */
+}
+.col-md-4{
+    text-align: center;
+}
+.container iframe{
+ 
+    display: block;
+    margin: 0 auto;
+    width : 90%; 
+    height : 400px;
+    
+
+    }
+
+div.flex-content{
+
+    justify-content: center;
+    margin-left : 10px;
+    margin-right : 10px;
+}
+
+.content{
+  background : none;
+}
+li,p{
+    /* font-family: 'Shadows Into Light', cursive; */
+    font-family: 'Grandstander', cursive;
+    font-size: 21px;
+}
+.container .flex-video{
+    display: flex;
+    justify-content: center;
+  }
+
+div.flex-images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+
+div.flex-button{
+    display: flex;
+    justify-content: center;
+}
+
+p.imagesC{
+    font-size: 10px;
+}
+div.content.flex-content h1{
+    font-size: 50px;
+    justify-content: center;
+    font-family: 'Shadows Into Light', cursive;
+
+}
+div.tag.container h1{
+
+    font-size: 28px;
+    justify-content: center;
+
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+
+/* Testing */
+

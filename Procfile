@@ -1,0 +1,1 @@
+web: gunicorn ehimachal.wsgi --log-file - 

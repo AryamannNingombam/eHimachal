@@ -1,0 +1,78 @@
+{%extends 'layout.html'%}
+
+{%block body%}
+{%load static%}
+<div class="destinationImage">
+
+    <img class="destinationListMain" src="{% static 'StaticImages/Accomodations/mainImage.jpg'  %}">
+    <div class="centeredListMain">
+    <h1>Accomodations</h1>
+  
+        
+    </div>
+</div>
+
+<div class="container">
+    
+        <div class="flex-accomodation">
+    {%for destination in page_obj%}
+    
+        <a href="{% url 'accomodationSpecific' destination.0.sno %}">
+            <div class="my-4 mx-3">
+                <div class="card">
+                    <img class="destinationList" src="/media/{{destination.1.image_url}}">
+                    <div class="centeredList my-5">
+                        <h1>{{destination.0.name}}</h1>
+                        <p>Learn More</p>
+                    </div>
+                </div>
+            </div>
+       </a>
+
+    
+       
+       {%endfor%}
+    </div>
+    
+  
+  
+</div>
+<div class="container paginationStyling">
+
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+
+                <a href="?page={{ page_obj.previous_page_number }}"><button class="btn">Previous</button></a>
+            {% endif %}
+    
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}"><button class="btn">Next</button></a>
+
+            {% endif %}
+        </span>
+
+</div>
+
+
+
+
+{%endblock%}
+{%block css%}
+
+<link rel="stylesheet" href="{% static 'css/accomodations.css' %}">
+<link rel="stylesheet" href="{% static 'css/background-image.css' %}">
+{%endblock%}
+  
+
+  
+
+
+
+
+
+
+

@@ -1,0 +1,162 @@
+div.mainHeaderImage {
+    background-image: url('../StaticImages/HomePage/MainHeader.jpg');
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+img.destinationList{
+  height:100%;
+  width: 100%;
+}
+.container iframe{
+display: block;
+margin: 0 auto;
+width : 90%; 
+height : 400px;
+}
+.container .flex-video{
+  display: flex;
+  justify-content: center;
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  color : white;
+  font-family: 'Merriweather', serif;
+ 
+}
+.centeredList  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  color : rgb(247, 247, 247);
+  font-family: 'Sigmar One', cursive;
+  text-align: center;
+ 
+}
+div.destinationListDiv{
+  text-align: center;
+}
+h1.centeredList{
+  font-size: 60px;
+}
+
+.centeredList p{
+  font-size: 18px;
+  border: 2px solid white;
+  
+}
+.centeredList h2{
+  font-size: 37px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.centered h1{
+  font-size: 40px;
+ 
+}
+.centered h3{
+  font-size: 27px;
+
+  margin: 10px;
+ 
+}
+
+div.card.cardAnimation{
+border: none;
+background : none;
+animation-name: retainCard;
+animation-duration: 1s;
+animation-fill-mode: forwards;
+}
+
+
+
+ @keyframes enhanceCard{
+   from {
+    width: 15rem;
+    height: 17rem;
+   }
+   to {
+    width: 18rem;
+    height: 20rem;
+   }
+ }
+ @keyframes retainCard{
+  from{
+    width: 18rem;
+    height: 20rem;
+  }
+  to{
+    width: 16rem;
+    height: 17rem;
+  }
+}
+.card{
+  width: 15rem;
+  height: 17rem;
+  margin: auto;
+}
+div.card.cardAnimation:hover{
+  border: none;
+background : none;
+  animation-name: enhanceCard;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.container h1,h2,h3{
+  text-align: center;
+  /* font-family: 'Bebas Neue', cursive; */
+  font-family: 'Amatic SC', cursive; 
+
+}
+.container h1{
+  font-size: 57px;
+}
+.container p,li{
+  /* font-family: 'Amatic SC', cursive; */
+  font-family: 'Grandstander', cursive;
+  font-size: 18px;
+}
+
+div.flex-container{
+  display : flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+div.scrollmenu {
+  background-color: #e1dcdc;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+div.flex-content{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin: 10px;
+}
+.container-fluid{
+  width: 100%;
+}

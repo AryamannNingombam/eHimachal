@@ -1,0 +1,246 @@
+{%extends 'layout.html'%}
+{%block title%}
+{{destination.name}}
+{%endblock%}
+{%load static%}
+{%block body%}
+
+
+    <div class="destinationImage">
+        <img class="destinationList" src="/media/{{main_image.image_url}}">
+        <div class="centeredList">
+        <h1>{{destination.name}}</h1>
+       
+            
+        </div>
+
+    </div>
+      
+      
+
+      
+
+
+
+<div class="courtesy ">
+    {{main_image.image_source | safe}}
+</div>
+
+
+
+<div class="container tag">
+  
+            <h1>{{destination.tag}}</h1>
+     
+
+</div>
+
+
+
+
+
+{%if destination.show_demographics%}
+<hr>
+<div id="demographics">
+
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-4 ">
+                    
+    
+    <i class="fa fa-male rounded iconStyling"></i>
+    <br>
+    <span class="populationStats">Male Population</span>
+    <br>
+    
+    <span class="statNumbers" id="malePopulation">{{destination.male_pc}}%</span>
+    
+    
+            </div>
+          
+                <div class="col-md-4 ">
+                    <i class="fa fa-users rounded iconStyling"></i>
+                    <br>
+                    <span class="populationStats">Total Population</span>
+                    <br>
+                    <span class="statNumbers" id="totalPopulation">{{destination.population}}</span>
+                </div>
+    
+            <div class="col-md-4 ">
+                <i class="fa fa-female rounded iconStyling"></i>
+                <br>
+                <span class="populationStats">Female Population</span>
+                <br>
+                <span class="statNumbers" id="femalePopulation">{{destination.female_pc}}%</span>
+            </div>
+            
+        </div>
+        
+        </div>
+        
+  <div class="container my-5" style="text-align: center;">
+      <div class="row" >
+          <div class="col-md-12">
+              
+                    <canvas id="populationChart"></canvas>
+                 
+              
+            </div>
+
+          
+      
+    </div>
+  </div> 
+  <div class="container" >
+    <div class="row">
+        <div class="col-md-4 ">
+                
+
+<i class="fa fa-male rounded iconStyling"></i>
+<br>
+<span class="populationStats">Male Educated</span>
+<br>
+
+<span class="statNumbers" id="maleEducated">{{destination.male_educated}}%</span>
+
+
+        </div>
+      
+            <div class="col-md-4 ">
+                <i class="fa fa-book rounded iconStyling"></i>
+                <br>
+                <span class="populationStats">Literacy Rate</span>
+                <br>
+                <span class="statNumbers" id="totalEducated">{{destination.total_educated}}%</span>
+            </div>
+
+
+             
+        <div class="col-md-4">
+            <i class="fa fa-female rounded iconStyling"></i>
+            <br>
+            <span class="populationStats">Female </span>
+            <br>
+            <span class="statNumbers" id="femaleEducated">{{destination.female_educated}}%</span>
+        </div>
+         
+    </div>
+    
+    </div>
+
+    <div class="container my-5" style="text-align: center;">
+        <div class="row" >
+            <div class="col-md-4">
+                <canvas id="literacyChartMale"></canvas>
+            </div>
+              <div class="col-md-4">
+                <canvas id="literacyChartAll"></canvas>
+              </div>
+              <div class="col-md-4">
+                <canvas id="literacyChartFemale"></canvas>
+              </div>
+             
+            
+        </div>
+    </div> 
+
+
+
+</div>
+
+        {%endif%}
+<hr>
+<div class="container ">
+    <div class="container">
+        <div class="flex-content content">
+            {{destination.description | safe}}
+        </div>
+
+    </div>
+   
+    
+    
+    
+    <br>
+    <div class="container my-2">
+        <div class="row">
+            <div class="col-md-12">
+                <h6>NOTE : The Above Content Has Been Taken from <a href="{{destination.content_credit}}" target="_blank">Here</a></h6>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+
+{%if destination.show_video%}
+
+<div class="container my-5 flex-video">
+    
+            <iframe  src="{{video.video_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+     
+</div>
+
+
+{%endif%}
+{%if destination.show_hotels%}
+<div class="container flex-button">
+    <a href="{% url 'accomodationSpecific' destination.sno %}" style="color : white;font-size: 23px;">
+        <button class="btn btn-lg btn-info" >
+            Go To Accomodations
+         </button>
+    </a>
+  
+</div>
+{%endif%}
+
+
+{%if destination.show_images%}
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Images of {{destination.name}}</h1>
+        </div>
+    </div>
+</div>
+
+    <div class="my-4 container flex-images">
+      
+   
+            {%for image in images%}
+            <div class="card mx-3 my-5" >
+          
+        
+                <img class="destinationListEnd" src="/media/{{image.image_url}}">
+                <div class="centeredList">
+                    <p>{{image.name}}</p>
+                </div><br>
+                <div class="container">
+                    <p class="imagesC">{{image.image_source | safe}}</p>
+                </div>
+                
+              </div>
+             
+              {%endfor%}
+ 
+        
+          
+          
+
+
+    </div>
+    {%endif%}
+</div>
+
+
+
+{%endblock%}
+{%block css%}
+
+<link rel="stylesheet" href="{% static 'css/place.css' %}">
+<link rel="stylesheet" href="{% static 'css/background-image.css' %}">
+{%endblock%}
+{%block js%}
+<script src="{% static 'Script/place.js' %}"></script>
+<script src="{% static 'Script/destinationanimations.js' %}"></script>
+{%endblock%}

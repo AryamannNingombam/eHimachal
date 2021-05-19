@@ -1,0 +1,62 @@
+{%extends 'layout.html'%}
+{%block title%}Contact Us!{%endblock%}
+{% load static %}
+{%block css%}  <link rel="stylesheet" href="{% static 'css/contact-error.css' %}">   {%endblock%}
+{%block body%}
+
+
+
+  
+
+    <div class="container my-5 ">
+        
+                <h1>Contact Us!</h1>
+                <p>We're Still Learning, So It Would Be Really Helpful If You Could Help Us Improve!</p>
+            
+        
+    <form enctype='multipart/form-data' action="/contact/issue-request" method="post">{%csrf_token%}
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="email">{{form.email.label}}<i class="fa fa-envelope"></i></label>
+            {{form.email}}
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label for="content">{{form.content.label}}
+                <i class="fa fa-comment"></i></label>
+                {{form.content}}
+        </div>
+    </div>
+</div>
+<div class="flex-image">
+    <div class="form-group">
+        <label for="image">Insert Image(Optional)
+            <i class="fa fa-file-image-o"></i></label>
+            <div class="container imageStyle">
+                {{form.image}}
+            </div>
+          
+</div>
+ 
+   
+</div>
+
+<button class="btn btn-lg btnStyle my-5" id="submitButton">Submit</button>
+   
+</form>
+</div>
+
+
+
+{%endblock%}
+{%block js%}
+<script type="module" src="{% static 'Script/contact-request.js' %}"></script>
+{%endblock%}
+
+
+
